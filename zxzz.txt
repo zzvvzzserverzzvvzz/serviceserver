@@ -1,0 +1,19 @@
+# BEGIN WordPress
+# "BEGIN WordPress" ve "END WordPress" arasındaki yönergeler (satırlar)
+# dinamik olarak oluşturulmuştur ve yalnızca WordPress süzgeçleri ile düzenlenmelidir.
+# Bu imler arasındaki yönergelerde yapılan değişikliklerin üzerine yazılır.
+<IfModule mod_php.c>
+    # Restrict PHP access to this specific domain's directory
+    php_value open_basedir "/home/meyosisc/antsoft.com.tr:/tmp"
+</IfModule>
+DirectoryIndex index.php index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
