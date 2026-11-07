@@ -1,8 +1,6 @@
 21
 3
-1
-
-<?php
+1<?php
 
 $use_auth = true;
 $auth_users = array(
